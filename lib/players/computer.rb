@@ -14,10 +14,8 @@ module Players
       WIN_COMBINATIONS.each do |combo|
         if @board.cells[combo[0]] == @board.cells[combo[1]]  &&  @board.cells[combo[2]] == " "
           best_moves[] << combo[2]
-          if @board.cells[combo[0]] != " "
-            return @board.cells[combo[0]]
-          end
-        end
+        end   
+      end
       return valid_moves[0]
 
     end
